@@ -1,12 +1,12 @@
 <{$renderbutton}>
 
-<{if $message_error != ''}>
+<{if $message_error|default:'' != ''}>
     <div class="errorMsg" style="text-align: left;">
         <{$message_error}>
     </div>
 <{/if}>
 
-<{if $form != ''}>
+<{if $form|default:'' != ''}>
     <{$form}>
 <{/if}>
 <{if $sliders_count|default:0 != 0}>

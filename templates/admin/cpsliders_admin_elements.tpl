@@ -7,7 +7,7 @@
     </select>
 </div>
 <{/if}>
-<{if $message_error != ''}>
+<{if $message_error|default:'' != ''}>
     <div class="errorMsg" style="text-align: left;">
         <{$message_error}>
     </div>
@@ -58,7 +58,7 @@
                                                                                                         alt="<{$smarty.const._EDIT}>"
                                                                                                         title="<{$smarty.const._EDIT}>"/></a>
                     <a class="tooltip" href="elements.php?op=clone&amp;element_id=<{$element.id}>" title="<{$smarty.const._AM_CPSLIDERS_ELEMENTS_CLONE}>">
-                        <img src="<{xoAdminIcons clone.png}>" alt="<{$smarty.const._MA_XMNEWS_CLONE}>"></a>                                                                                        
+                        <img src="<{xoAdminIcons clone.png}>" alt="<{$smarty.const._MA_CPSLIDERS_CLONE}>"></a>
                     &nbsp;<a class="tooltip" href="elements.php?op=delete&amp;element_id=<{$element.id}>" title="<{$smarty.const._DELETE}>"><img
                                 src="<{xoAdminIcons delete.png}>" alt="<{$smarty.const._DELETE}>" title="<{$smarty.const._DELETE}>"</a>
                 </td>
@@ -75,11 +75,11 @@
     IMG_OFF = '<{xoAdminIcons cancel.png}>';
 
     $('.lightbox').lightBox({
-        imageLoading: '../../system/language/<{$xoops_language}>/images/lightbox-ico-loading.gif',
-        imageBtnClose: '../../system/language/<{$xoops_language}>/images/lightbox-btn-close.gif',
-        imageBtnNext: '../../system/language/<{$xoops_language}>/images/lightbox-btn-next.gif',
-        imageBtnPrev: '../../system/language/<{$xoops_language}>/images/lightbox-btn-prev.gif',
-        imageBlank: '../../system/language/<{$xoops_language}>/images/lightbox-blank.gif'
+        imageLoading: '../../system/language/<{$xoops_language|default:'english'}>/images/lightbox-ico-loading.gif',
+        imageBtnClose: '../../system/language/<{$xoops_language|default:'english'}>/images/lightbox-btn-close.gif',
+        imageBtnNext: '../../system/language/<{$xoops_language|default:'english'}>/images/lightbox-btn-next.gif',
+        imageBtnPrev: '../../system/language/<{$xoops_language|default:'english'}>/images/lightbox-btn-prev.gif',
+        imageBlank: '../../system/language/<{$xoops_language|default:'english'}>/images/lightbox-blank.gif'
     });
 
 
