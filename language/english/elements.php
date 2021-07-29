@@ -25,7 +25,7 @@ declare(strict_types=1);
 
 
  // Buttons
-define('_AM_CPSLIDERS_ELEMENTS_ADD', 'Add a new élément');
+define('_AM_CPSLIDERS_ELEMENTS_ADD', 'Add a new element');
 define('_AM_CPSLIDERS_ELEMENTS_LIST', 'Sliders list');
 define('_AM_CPSLIDERS_ELEMENTS_SLIDER_DD', 'Slider to show');
 define('_AM_CPSLIDERS_ELEMENTS_SLIDER_DD_SHOW_ALL', 'Show all');
@@ -43,7 +43,7 @@ define('_AM_CPSLIDERS_CONTENT_STATUS_NA', 'Disabled');
 define('_AM_CPSLIDERS_ELEMENTS_CLONE', 'Clone');
 //Form
 define('_AM_CPSLIDERS_ELEMENTS_FORM_ADD', 'Add an element');
-define('_AM_CPSLIDERS_ELEMENTS_FORM_EDIT', 'Edit an élément');
+define('_AM_CPSLIDERS_ELEMENTS_FORM_EDIT', 'Edit an element');
 define('_AM_CPSLIDERS_ELEMENTS_FORM_SELECT_SLIDER', 'Show this element in the selected slider');
 define('_AM_CPSLIDERS_ELEMENTS_FORM_IMG_DESC', 'Max file size ');
 define('_AM_CPSLIDERS_ELEMENTS_FORM_IMG_DESC_SELECT', 'Select an existing image');
@@ -54,3 +54,5 @@ define('_AM_CPSLIDERS_ELEMENTS_MSG_SAVE_SUCCESS', 'Element saved successfully!')
 define('_AM_CPSLIDERS_ELEMENTS_MSG_DELETE_SUCCESS', 'Element deleted successfully!');
 define('_AM_CPSLIDERS_ELEMENTS_MSG_SUREDEL', "Are you sure to delete '%s' element?");
 define('_AM_CPSLIDERS_FIELD_ORDER_ERROR', 'Error in Element order');
+
+define('_AM_CPSLIDERS_NONE', 'None');

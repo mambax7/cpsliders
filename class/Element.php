@@ -81,7 +81,7 @@ class Element extends \XoopsObject {
         $slidersHandler = $helper->getHandler('Sliders');
         $sliderselect_id = new \XoopsFormSelect(_AM_CPSLIDERS_ELEMENTS_FORM_SELECT_SLIDER, 'element_slider_id', $selectedSlider);
         $sliders         = $slidersHandler->getObjects(null, true, false);
-        $sliderselect_id->addOption(0, "Aucun");
+        $sliderselect_id->addOption(0, _AM_CPSLIDERS_NONE);
         foreach ($sliders as $slider) {			
             $sliderselect_id->addOption($slider['slider_id'], $slider['slider_title']);
         }

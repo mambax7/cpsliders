@@ -77,4 +77,7 @@ include_once __DIR__ . '/common.php';
 // Message
 define('_AM_CPSLIDERS_MSG_ERROR', 'Some error has occurred!');
 
+define('_MA_CPSLIDERS_CLONE', 'Clone');
+
 // ---------------- End ----------------
+
