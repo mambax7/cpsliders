@@ -45,7 +45,7 @@ class SlidersHandler extends \XoopsPersistableObjectHandler
 
     public function renderSlider($slider_id, $interval, $type){
 
-        $result = "";
+        $result = '';
         $criteria = new \CriteriaCompo();
         $criteria->add(new \Criteria('element_slider_id', $slider_id));
         $criteria->add(new \Criteria('element_visible', 1));
@@ -59,8 +59,8 @@ class SlidersHandler extends \XoopsPersistableObjectHandler
             case 'carousel':
 
                 $el_num = 0;
-                $carousel_items = "";
-                $carousel_indicators = "";
+                $carousel_items = '';
+                $carousel_indicators = '';
 
                 foreach (array_keys($elements_arr) as $i) {
                     $carousel_indicators .= '<li data-target="#carouselSlider'.$slider_id.'" data-slide-to="'.$el_num.'" ';
@@ -109,7 +109,7 @@ class SlidersHandler extends \XoopsPersistableObjectHandler
 
             case 'logos':
 
-                $logos_items = "";
+                $logos_items = '';
                 foreach (array_keys($elements_arr) as $i) {
                     $logos_items .= '<div class="slide">';
                     if(($elements_arr[$i]->getVar('element_url')) != '') {

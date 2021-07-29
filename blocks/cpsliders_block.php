@@ -41,15 +41,15 @@ function cpsliders_block_show($options)
     $helper = \XoopsModules\Cpsliders\Helper::getInstance();
 
     $block              = [];
-    $block["slider_id"] = $options[0];
-    $block["interval"]  = $options[1];
-    $block["type"]      = $options[2];
-    $block["content"]   = $slidersHandler->renderSlider($block["slider_id"], $block["interval"], $block["type"]);
+    $block['slider_id'] = $options[0];
+    $block['interval']  = $options[1];
+    $block['type']      = $options[2];
+    $block['content']   = $slidersHandler->renderSlider($block['slider_id'], $block['interval'], $block['type']);
     
     $GLOBALS['xoTheme']->addStylesheet(CPSLIDERS_URL . '/assets/css/style.css');
 
-    if ( $block["type"] == 'logos' ) {
-        $GLOBALS['xoTheme']->addScript("browse.php?Frameworks/jquery/jquery.js");
+    if ($block['type'] == 'logos' ) {
+        $GLOBALS['xoTheme']->addScript('browse.php?Frameworks/jquery/jquery.js');
         $GLOBALS['xoTheme']->addScript(CPSLIDERS_URL . '/assets/js/slick.js');
         $GLOBALS['xoTheme']->addScript(CPSLIDERS_URL . '/assets/js/cpsliders.js');
         $GLOBALS['xoTheme']->addStylesheet(CPSLIDERS_URL . '/assets/css/slick.css');
@@ -57,7 +57,7 @@ function cpsliders_block_show($options)
     } 
 
     if ('template' === $options[3]) {
-        $GLOBALS['xoopsTpl']->assign("xoops_cpsliders_" . $options[4], $block["content"]);
+        $GLOBALS['xoopsTpl']->assign('xoops_cpsliders_' . $options[4], $block['content']);
         $block = false;
     }
 
@@ -81,7 +81,7 @@ function cpsliders_block_edit($options)
     $elementsHandler = $helper->getHandler('Elements');
 
 
-	$form = new \CpslidersBlockForm("", "", "");
+	$form = new \CpslidersBlockForm('', '', '');
     $sliderSelect = new \XoopsFormSelect(_AM_CPSLIDERS_BLOCK_SLIDER_TOSHOW, 'options[0]', $options[0]);
     $sliderSelect->addOption(0, _AM_CPSLIDERS_BLOCK_SLIDER_TOSHOW_NONE);
     $sliders = $slidersHandler->getObjects(null, true, false);

@@ -69,16 +69,16 @@ switch ($op) {
         $xoopsTpl->assign('filter', true);
         $elements = [];
         foreach (array_keys($elements_arr) as $i) {
-            $element["id"] = $elements_arr[$i]->getVar('element_id');
-            $element["title"] = $elements_arr[$i]->getVar('element_title');
-            $element["description"] = $elements_arr[$i]->getVar('element_description');
-            $element["img"] = XOOPS_UPLOAD_URL . '/cpsliders/images/elements/' . $elements_arr[$i]->getVar('element_img');
-            $element["url"] = $elements_arr[$i]->getVar('element_url');
-            $element["order"] = $elements_arr[$i]->getVar('element_order');
-            $element["visible"] = $elements_arr[$i]->getVar('element_visible');
-            $slider = $slidersHandler->get($elements_arr[$i]->getVar('element_slider_id'));
-            $element["slider_title"] = $slider->getVar('slider_title');
-            $elements[] = $element;
+            $element['id']           = $elements_arr[$i]->getVar('element_id');
+            $element['title']        = $elements_arr[$i]->getVar('element_title');
+            $element['description']  = $elements_arr[$i]->getVar('element_description');
+            $element['img']          = XOOPS_UPLOAD_URL . '/cpsliders/images/elements/' . $elements_arr[$i]->getVar('element_img');
+            $element['url']          = $elements_arr[$i]->getVar('element_url');
+            $element['order']        = $elements_arr[$i]->getVar('element_order');
+            $element['visible']      = $elements_arr[$i]->getVar('element_visible');
+            $slider                  = $slidersHandler->get($elements_arr[$i]->getVar('element_slider_id'));
+            $element['slider_title'] = $slider->getVar('slider_title');
+            $elements[]              = $element;
         }
 
         // Filter by sliders
@@ -115,7 +115,7 @@ switch ($op) {
         $element_id = Request::getInt('element_id', 0);
 
         if ($element_id == 0) {
-            $xoopsTpl->assign('message_error', "erreur");
+            $xoopsTpl->assign('message_error', 'erreur');
         } else {
             $obj = $elementsHandler->get($element_id);
             $form = $obj->getForm();
@@ -131,7 +131,7 @@ switch ($op) {
         $element_id = Request::getInt('element_id', 0);
 
         if ($element_id == 0) {
-            $xoopsTpl->assign('message_error', "erreur");
+            $xoopsTpl->assign('message_error', 'erreur');
         } else {
             $obj = $elementsHandler->get($element_id);
             $clone = $elementsHandler->create();
@@ -275,6 +275,6 @@ switch ($op) {
         exit;
         break;
 }
-$xoopsTpl->display("db:cpsliders_admin_elements.tpl");
+$xoopsTpl->display('db:cpsliders_admin_elements.tpl');
 
 require __DIR__ . '/footer.php';

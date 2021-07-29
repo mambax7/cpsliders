@@ -52,7 +52,7 @@ class Slider extends \XoopsObject {
             $form->addElement(new \XoopsFormHidden('slider_id', $this->getVar('slider_id')));
             $title = $this->getVar('slider_title');
         } else {
-            $title = "";
+            $title = '';
         }
 
         // Slider: title

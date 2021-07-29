@@ -35,8 +35,8 @@ include_once 'common.php';
 \define('_MI_CPSLIDERS_ADMENU4', 'Feedback');
 \define('_MI_CPSLIDERS_ABOUT', 'About');
 // Blocks
-define('_MI_CPSLIDERS_BLOCK1', "Slider block");
-define('_MI_CPSLIDERS_BLOCK1_DESC', "Manage sliders to display");
+define('_MI_CPSLIDERS_BLOCK1', 'Slider block');
+define('_MI_CPSLIDERS_BLOCK1_DESC', 'Manage sliders to display');
 // Config
 \define('_MI_CPSLIDERS_EDITOR_ADMIN', 'Editor admin');
 \define('_MI_CPSLIDERS_EDITOR_ADMIN_DESC', 'Select the editor which should be used in admin area for text area fields');

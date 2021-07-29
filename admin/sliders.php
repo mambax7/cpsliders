@@ -62,9 +62,9 @@ switch ($op) {
 
         $sliders = [];
         foreach (array_keys($sliders_arr) as $i) {
-            $slider["slider_id"] = $sliders_arr[$i]->getVar('slider_id');
-            $slider["slider_title"] = $sliders_arr[$i]->getVar('slider_title');
-            $sliders[] = $slider;
+            $slider['slider_id']    = $sliders_arr[$i]->getVar('slider_id');
+            $slider['slider_title'] = $sliders_arr[$i]->getVar('slider_title');
+            $sliders[]              = $slider;
         }
         $xoopsTpl->assign('sliders', $sliders);
 
@@ -147,6 +147,6 @@ switch ($op) {
         break;
 
 }
-$xoopsTpl->display("db:cpsliders_admin_sliders.tpl");
+$xoopsTpl->display('db:cpsliders_admin_sliders.tpl');
 
 require __DIR__ . '/footer.php';

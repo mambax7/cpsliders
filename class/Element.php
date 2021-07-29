@@ -70,9 +70,9 @@ class Element extends \XoopsObject {
             $ordre          = $this->getVar('element_order');
             $selectedSlider = $this->getVar('element_slider_id');
         } else {
-            $title = "";
-            $description = "";
-            $lien = "";
+            $title = '';
+            $description = '';
+            $lien = '';
             $ordre = 1;
             $selectedSlider = 0;
         }
@@ -97,10 +97,10 @@ class Element extends \XoopsObject {
         $upload_size = $helper->getConfig('maxsize_image', 104858);
 
         $blank_img      	 = $this->getVar('element_img') ?: 'blank.png';
-        $uploadirectory      = str_replace(XOOPS_URL, '', CPSLIDERS_UPLOAD_IMAGE_URL."/elements/");
-        $imgtray_img         = new \XoopsFormElementTray("Image" . '<br><br>' . _AM_CPSLIDERS_ELEMENTS_FORM_IMG_DESC . ($upload_size / 1048576) . ' MB <br>');
+        $uploadirectory      = str_replace(XOOPS_URL, '', CPSLIDERS_UPLOAD_IMAGE_URL . '/elements/');
+        $imgtray_img         = new \XoopsFormElementTray('Image' . '<br><br>' . _AM_CPSLIDERS_ELEMENTS_FORM_IMG_DESC . ($upload_size / 1048576) . ' MB <br>');
         $imageselect_img     = new \XoopsFormSelect(_AM_CPSLIDERS_ELEMENTS_FORM_IMG_DESC_SELECT, 'element_img', $blank_img);
-        $image_array_img     = \XoopsLists::getImgListAsArray(CPSLIDERS_UPLOAD_IMAGE_PATH."/elements/");
+        $image_array_img     = \XoopsLists::getImgListAsArray(CPSLIDERS_UPLOAD_IMAGE_PATH . '/elements/');
         foreach ($image_array_img as $image_img) {			
             $imageselect_img->addOption("$image_img", $image_img);
         }
