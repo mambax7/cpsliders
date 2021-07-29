@@ -102,7 +102,7 @@ class Element extends \XoopsObject {
         $imageselect_img     = new \XoopsFormSelect(_AM_CPSLIDERS_ELEMENTS_FORM_IMG_DESC_SELECT, 'element_img', $blank_img);
         $image_array_img     = \XoopsLists::getImgListAsArray(CPSLIDERS_UPLOAD_IMAGE_PATH . '/elements/');
         foreach ($image_array_img as $image_img) {			
-            $imageselect_img->addOption("$image_img", $image_img);
+            $imageselect_img->addOption((string)$image_img, $image_img);
         }
 
         $imageselect_img->setExtra("onchange='cpslidersImgSelected(\"image_img2\", \"element_img\", \"" . $uploadirectory . "\", \"\", \"" . XOOPS_URL . "\")'");
