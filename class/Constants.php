@@ -32,8 +32,8 @@ namespace XoopsModules\Cpsliders;
 interface Constants
 {
 	// Constants for tables
-	const TABLE_SLIDERS = 0;
-	const TABLE_ELEMENTS = 1;
+	public const TABLE_SLIDERS = 0;
+	public const TABLE_ELEMENTS = 1;
 
 	// Constants for status
 	public const STATUS_NONE      = 0;
