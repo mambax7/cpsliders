@@ -44,7 +44,7 @@ $modversion = [
 	'release_date'        => '2021/06/01',
 	'manual'              => 'link to manual file',
 	'manual_file'         => XOOPS_URL . '/modules/cpsliders/docs/install.txt',
-	'min_php'             => '7.0',
+	'min_php'             => '7.1',
 	'min_xoops'           => '2.5.9',
 	'min_admin'           => '1.2',
 	'min_db'              => ['mysql' => '5.5', 'mysqli' => '5.5'],
