@@ -53,7 +53,7 @@ class SlidersHandler extends \XoopsPersistableObjectHandler
         $criteria->setOrder('ASC');
         $helper = \XoopsModules\Cpsliders\Helper::getInstance();
         $elementsHandler = $helper->getHandler('Elements');
-        $elements_arr = $elementsHandler->getall($criteria);
+        $elements_arr = $elementsHandler->getAll($criteria);
 
         switch ($type) {
             case 'carousel':

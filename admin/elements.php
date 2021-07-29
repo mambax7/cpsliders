@@ -63,7 +63,7 @@ switch ($op) {
         if ($selected_slider_id != 0) {
             $criteria->add(new \Criteria('element_slider_id', $selected_slider_id));
         }
-        $elements_arr = $elementsHandler->getall($criteria);
+        $elements_arr = $elementsHandler->getAll($criteria);
         $elements_count = $elementsHandler->getCount($criteria);
         $xoopsTpl->assign('elements_count', $elements_count);
         $xoopsTpl->assign('filter', true);
@@ -86,7 +86,7 @@ switch ($op) {
         $slider_criteria = new \Criteria('');
         $slider_criteria->setSort('slider_title');
         $slider_criteria->setOrder('ASC');
-        $sliders_arr = $slidersHandler->getall($slider_criteria);
+        $sliders_arr = $slidersHandler->getAll($slider_criteria);
         foreach (array_keys($sliders_arr) as $i) {
             $slider_options .= '<option value="'.$sliders_arr[$i]->getVar('slider_id').'" ' . ($selected_slider_id == $sliders_arr[$i]->getVar('slider_id') ? ' selected="selected"' : '') . '>'.$sliders_arr[$i]->getVar('slider_title').'</option>';
         }

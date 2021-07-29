@@ -52,7 +52,7 @@ switch ($op) {
         $criteria->setSort('slider_title');
         $criteria->setOrder('ASC');
 
-        $sliders_arr = $slidersHandler->getall($criteria);
+        $sliders_arr = $slidersHandler->getAll($criteria);
         $sliders_count = $slidersHandler->getCount($criteria);
 
         $xoopsTpl->assign('sliders_count', $sliders_count);
