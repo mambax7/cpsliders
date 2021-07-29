@@ -136,11 +136,11 @@ switch ($op) {
                 xoops_error($obj->getHtmlErrors());
             }
         } else {
-            xoops_confirm(array(
+            xoops_confirm([
                 'ok'         => 1,
                 'slider_id'  => $slider_id,
                 'op'         => 'delete'
-            ), $_SERVER['REQUEST_URI'], sprintf(_AM_CPSLIDERS_SLIDERS_MSG_SUREDEL, $obj->getVar('slider_title')));
+                          ], $_SERVER['REQUEST_URI'], sprintf(_AM_CPSLIDERS_SLIDERS_MSG_SUREDEL, $obj->getVar('slider_title')));
 
         }
 

@@ -223,11 +223,11 @@ switch ($op) {
                 xoops_error($obj->getHtmlErrors());
             }
         } else {
-            xoops_confirm(array(
+            xoops_confirm([
                 'ok'         => 1,
                 'element_id' => $element_id,
                 'op'         => 'delete'
-            ), $_SERVER['REQUEST_URI'], sprintf(_AM_CPSLIDERS_ELEMENTS_MSG_SUREDEL, $obj->getVar('element_title')));
+                          ], $_SERVER['REQUEST_URI'], sprintf(_AM_CPSLIDERS_ELEMENTS_MSG_SUREDEL, $obj->getVar('element_title')));
 
         }
         
